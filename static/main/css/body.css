@@ -1,0 +1,14 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3f;
+    color: #f0f4f8;
+}
+
+/* Центровка и максимальная ширина */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

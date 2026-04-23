@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='main/main.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo-block">
+        <img src="{{ url_for('static', path='main/images/inateklogo.jpg') }}" alt="Логотип">
+        <h1>ИНАТЭК</h1>
+      </div>
+  
+      <nav id="nav-menu" class="nav-menu">
+        <a href="/">Главная</a>
+        <a href="/about/">О компании</a>
+        <a href="/projects/">Проекты</a>
+        <a href="/contact/">Контакты</a>
+      </nav>
+  
+      <button class="burger" id="burger-btn" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+<main>
+  <section class="about-page">
+    <div class="container">
+
+      <h2 class="section-title">О компании</h2>
+        
+      <div class="about-page-content">
+        <div class="about-page-text">
+          <p>
+            ООО «ИНАТЕК» — российская инжиниринговая компания, специализирующаяся на разработке нестандартного оборудования и внедрении роботизированных систем для объектов атомной энергетики.
+          </p>
+          <p>
+            Мы занимаем лидирующие позиции в области автоматизации технологических процессов, проектирования и инженерного консалтинга. С 2001 года успешно реализуем проекты «под ключ» — от концепции до технического сопровождения.
+          </p>
+          <p> 
+            Компания активно внедряет международные стандарты качества и современные цифровые технологии, что позволяет нам быть надёжным партнёром крупнейших предприятий атомной, энергетической и промышленной отраслей.
+          </p>
+        </div>
+        <div class="about-page-slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="{{ url_for('static', path='main/images/architectural-blueprints.jpg') }}" alt="Слайд 1">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('static', path='main/images/engineer-photovoltaics-factory-using-tracking-software-laptop.jpg') }}" alt="Слайд 2">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('static', path='main/images/html-css-collage-concept-with-person.jpg') }}" alt="Слайд 3">
+                </div>
+            </div>
+        </div>
+      </div>
+      <section class="docs-section">
+        <div class="container">
+          <div class="docs-grid">
+      
+            <div class="doc-card">
+              <a href="{{ url_for('static', path='main/docs/Изменения УДЛ от 02.11.2024.pdf') }}" download>
+                <span>Изменения УДЛ от 02.11.2024</span>
+                <img src="{{ url_for('static', path='main/icons/pdf-icon.svg') }}" alt="PDF" class="doc-icon">
+              </a>
+            </div>
+      
+            <div class="doc-card">
+              <a href="{{ url_for('static', path='main/docs/Сертификат Инатэк-ГОСТ13485.pdf') }}" download>
+                <span>Сертификат ГОСТ13485</span>
+                <img src="{{ url_for('static', path='main/icons/pdf-icon.svg') }}" alt="PDF" class="doc-icon">
+              </a>
+            </div>
+      
+            <div class="doc-card">
+              <a href="{{ url_for('static', path='main/docs/Сtртификат СМК до 02.10.2025.pdf') }}" download>
+                <span>Сертификат СМК до 02.10.2025</span>
+                <img src="{{ url_for('static', path='main/icons/pdf-icon.svg') }}" alt="PDF" class="doc-icon">
+              </a>
+            </div>
+      
+            <div class="doc-card">
+              <a href="{{ url_for('static', path='main/docs/Лицензия_Инатэк_НП_38_16_16_05_до_26_04_2032.pdf') }}" download>
+                <span>Лицензия НП 38_16_16</span>
+                <img src="{{ url_for('static', path='main/icons/pdf-icon.svg') }}" alt="PDF" class="doc-icon">
+              </a>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+      
+      
+    <div class="directors">
+      <h3>Руководство</h3>
+      <div class="director">
+        <h4>Жуков Андрей Викторович</h4>
+        <h5>Генеральный директор</h5>
+        <p>Тел: +7(937) 275 12 52</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+      
+      <!-- Блок 1: Название + права -->
+      <div class="footer-left">
+        <p>{{ year }}<br> Общество с ограниченной ответственностью «ИНАТЭК»<br><br>© Все права защищены.</p>
+      </div>
+  
+      <!-- Блок 2: Навигация -->
+      <div class="footer-nav">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about/">О компании</a></li>
+          <li><a href="/projects/">Проекты</a></li>
+          <li><a href="/contact/">Контакты</a></li>
+        </ul>
+      </div>
+  
+      <!-- Блок 3: Контакты -->
+      <div class="footer-contacts">
+        <h4>Контакты</h4>
+        <p>Телефон: <a href="tel:+79372751252">+7(937) 275 12 52</a></p>
+        <p>Email: <a href="mailto:info@inatek.ru">inatech@mail.ru</a></p>
+      </div>
+  
+    </div>
+</footer>
+<script src="{{ url_for('static', path='main/js/about-slider.js') }}"></script>
+<script src="{{ url_for('static', path='main/js/script.js') }}"></script>
+</body>
+</html>

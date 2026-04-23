@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main/main.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo-block">
+        <img src="{{ url_for('static', path='main/images/inateklogo.jpg') }}" alt="Логотип">
+        <h1>ИНАТЭК</h1>
+      </div>
+  
+      <nav id="nav-menu" class="nav-menu">
+        <a href="/">Главная</a>
+        <a href="{{ url_for('about_page') }}">О компании</a>
+        <a href="{{ url_for('projects_page') }}">Проекты</a>
+        <a href="/contact/">Контакты</a>
+      </nav>
+  
+      <button class="burger" id="burger-btn" aria-label="Меню">☰</button>
+    </div>
+  </header>
+     
+    
+
+<main>
+    <section class="hero" id="hero"
+         data-bg1="static/main/images/architectural-blueprints.jpg"
+         data-bg2="static/main/images/engineer-photovoltaics-factory-using-tracking-software-laptop.jpg"
+         data-bg3="static/main/images/html-css-collage-concept-with-person.jpg">
+
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h2>Разработка и изготовление оборудования для атомной отрасли</h2>
+            <p>Мы создаём роботизированные системы для работы в условиях радиационной защиты на объектах атомной энергетики.</p>
+            <button class="connect" id="connect" onclick="location.href='/contact/'" aria-label="Связаться с нами">
+              Связаться с нами
+            </button>
+        </div>
+
+        <div class="hero-image">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="{{ url_for('static', path='main/images/architectural-blueprints.jpg') }}" alt="Слайд 1">
+                        <div class="slide-caption">
+                            <h2>Проектирование</h2>
+                            <p>Создаём индивидуальные инженерные решения, учитывая технические требования и условия эксплуатации оборудования.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', path='main/images/engineer-photovoltaics-factory-using-tracking-software-laptop.jpg') }}" alt="Слайд 2">
+                        <div class="slide-caption">
+                            <h2>Разработка</h2>
+                            <p>Реализуем проекты с нуля: от эскизов до готовых технологических решений с применением современных технологий и материалов.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', path='main/images/html-css-collage-concept-with-person.jpg') }}" alt="Слайд 3">
+                        <div class="slide-caption">
+                            <h2>Тестирование</h2>
+                            <p>Проводим комплексные испытания и валидацию оборудования перед внедрением, гарантируя надежность в условиях атомной отрасли.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопки ВНЕ .slides -->
+                <button class="slide-btn prev" aria-label="Назад">&#10094;</button>
+                <button class="slide-btn next" aria-label="Вперёд">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <section class="about">
+        <div class="about-inner">
+          <div class="about-text">
+            <h2>О нас</h2>
+            <p>Компания основана в 2001 году и занимает лидирующие позиции на рынке инженерных решений и автоматизации.</p>
+            <p>Мы реализуем комплексные проекты под ключ: от проектирования до запуска и технического сопровождения. Используем современные технологии и соблюдаем международные стандарты качества.</p>
+            <p><strong>№1 в России по нестандартным инженерным решениям</strong></p>
+          </div>
+      
+          <div class="about-stats">
+            <div class="stat">
+              <div class="number">70+</div>
+              <div class="label">завершённых проектов</div>
+            </div>
+            <div class="stat">
+              <div class="number">20+</div>
+              <div class="label">лет на рынке</div>
+            </div>
+            <div class="stat">
+              <div class="number">15</div>
+              <div class="label">городов присутствия</div>
+            </div>
+            <div class="stat">
+              <div class="number">10</div>
+              <div class="label">отраслей промышленности</div>
+            </div>
+          </div>
+        </div>
+        <a href="/about/" class="more-btn" aria-label="Подробнее о нас">Подробнее</a>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h3>Наши направления</h3>
+            <ul>
+                <li>Проектирование и разработка оборудования</li>
+                <li>Инженерный консалтинг</li>
+                <li>Решения под ключ для атомной отрасли</li>
+                <li>Автоматизация технологических процессов</li>
+                <li>Разработка роботизированных комплексов</li>
+                <li>Интеграция систем радиационной защиты</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="home-projects">
+      <h2 class="projects-title">Проекты</h2>
+      <div class="projects-grid">
+        <div class="project-tile large" style="background-image: url('{{ url_for('static', path='main/images/product9/product91.jpg') }}')">
+          <a href="{{ url_for('project_detail', project_id=9) }}" class="tile-link">
+            <div class="tile-content">
+              <h3>Технология и АПК для дезактивации выведенного из эксплуатации трубного оборудования АЭС с применением озона</h3>
+              <span class="arrow">→</span>
+            </div>
+          </a>
+        </div>
+      
+        <div class="project-tile small" style="background-image: url('{{ url_for('static', path='main/images/product1/product1.jpg') }}')">
+          <a href="{{ url_for('project_detail', project_id=1) }}" class="tile-link">
+            <div class="tile-content">
+              <h3>Модификация сканирующего электронного микроскопа серии Zeiss EVO для работы в РЗК с РО</h3>
+            </div>
+          </a>
+        </div>
+      
+        <div class="project-tile small" style="background-image: url('{{ url_for('static', path='main/images/product3/product34.png') }}')">
+          <a href="{{ url_for('project_detail', project_id=3) }}" class="tile-link">
+            <div class="tile-content">
+              <h3>Робототехнический комплекс с интеллектуальной системой управления для работы в горячих камерах на предприятиях атомной отрасли.</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-slider-section">
+        <h2 class="trust-title">Нам доверяют</h2>
+      
+        <div class="trust-slider">
+          <div class="slider-track">
+            <div class="slider-group" aria-label="Партнеры">
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo1.png') }}" alt="Компания 1"></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo2.png') }}" alt="Компания 2"></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo3.png') }}" alt="Компания 3"></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo4.png') }}" alt="Компания 4"></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo5.png') }}" alt="Компания 5"></div>
+            </div>
+            <div class="slider-group" aria-hidden="true">
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo1.png') }}" alt=""></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo2.png') }}" alt=""></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo3.png') }}" alt=""></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo4.png') }}" alt=""></div>
+              <div class="logo"><img src="{{ url_for('static', path='main/images/logo5.png') }}" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    
+    <!-- Блок 1: Название + права -->
+    <div class="footer-left">
+      <p>{{ year }}<br> Общество с ограниченной ответственностью «ИНАТЭК»<br></p>
+    </div>
+
+    <!-- Блок 2: Навигация -->
+    <div class="footer-nav">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/about/">О компании</a></li>
+        <li><a href="/projects/">Проекты</a></li>
+        <li><a href="/contact/">Контакты</a></li>
+      </ul>
+    </div>
+
+    <!-- Блок 3: Контакты -->
+    <div class="footer-contacts">
+      <h4>Контакты</h4>
+      <p>Телефон: <a href="tel:+74951234567">+7(937) 275 12 52</a></p>
+      <p>Email: <a href="mailto:info@inatek.ru">inatech@mail.ru</a></p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© Все права защищены.</p>
+  </div>
+</footer>
+<script src="{{ url_for('static', path='main/js/script.js') }}"></script>
+<script src="{{ url_for('static', path='main/js/slider.js') }}"></script>
+</body>
+</html>

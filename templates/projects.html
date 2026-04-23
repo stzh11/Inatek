@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проекты | ИНАТЭК</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='main/main.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo-block">
+        <img src="{{ url_for('static', path='main/images/inateklogo.jpg') }}" alt="Логотип">
+        <h1>ИНАТЭК</h1>
+      </div>
+  
+      <nav id="nav-menu" class="nav-menu">
+        <a href="/">Главная</a>
+        <a href="/about/">О компании</a>
+        <a href="/projects/">Проекты</a>
+        <a href="/contact/">Контакты</a>
+      </nav>
+  
+      <button class="burger" id="burger-btn" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="projects-section">
+      <div class="container">
+        <h2 class="section-title">Наши проекты</h2>
+        <p class="projects-subtitle">
+          Мы реализуем комплексные инженерные решения в атомной и промышленной сферах
+        </p>
+  
+        <div class="projects-page-grid">
+          <!-- Проект 1 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product1/product1.jpg') }}" alt="Проект 1">
+            <div class="tile-content">
+              <h3>Модификация сканирующего электронного микроскопа серии Zeiss EVO</h3>
+              <p>для работы в радиационной защитной камере с радиоактивными образцами</p>
+              <a href="{{ url_for('project_detail', project_id=1) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+  
+          <!-- Проект 2 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product2/product21.jpg') }}" alt="Проект 2">
+            <div class="tile-content">
+              <h3>Разработка управляемой дистанционно системы автоматизированной загрузки и выгрузки образцов</h3>
+              <p>содержащих радиоактивные компоненты,  для электронного микроскопа Zeiss Merlin.</p>
+              <a href="{{ url_for('project_detail', project_id=2) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+  
+          <!-- Проект 3 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product3/product34.png') }}" alt="Проект 3">
+            <div class="tile-content">
+              <h3>Робототехнический комплекс с интеллектуальной системой управления</h3>
+              <p>для работы в горячих камерах на предприятиях атомной отрасли.</p>
+              <a href="{{ url_for('project_detail', project_id=3) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+  
+          <!-- Проект 4 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product4/product42.png') }}" alt="Проект 4">
+            <div class="tile-content">
+              <h3>Разработка и изготовление внутрикамерного технологического оборудования</h3>
+              <p>для участка производства источников ионизирующего излучения на основе Ir-192</p>
+              <a href="{{ url_for('project_detail', project_id=4) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- Проект 5 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product5/product51.png') }}" alt="Проект 5">
+            <div class="tile-content">
+              <h3>Автоматизированная система регистрации параметров технологических процессов,</h3>
+              <p>документирования и сопровождения жизненного цикла производства источников гамма-излучения на основе радионуклида иридий-192.</p>
+              <a href="{{ url_for('project_detail', project_id=5) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+          <!-- Проект 6 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product6/product63.jpg') }}" alt="Проект 6">
+            <div class="tile-content">
+              <h3>Автоматизированная проботека</h3>
+              <p>Предназначена для размещения перед измерением, автоматизированной доставки к детектору и измерений гамма-спектров контейнеров с облученными образцами, используемыми в нейтрон-активационном анализе.</p>
+              <a href="{{ url_for('project_detail', project_id=6) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+          <!-- Проект 7 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product7/product71.png') }}" alt="Проект 7">
+            <div class="tile-content">
+              <h3>Система обеспечения измерения мгновенного гамма-излучения</h3>
+              <p>Предназначена для проведения облучения исследуемого вещества тепловыми нейтронами и обеспечения условий для регистрации гамма-излучения</p>
+              <a href="{{ url_for('project_detail', project_id=7) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+          <!-- Проект 8 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product8/product82.jpg') }}" alt="Проект 8">
+            <div class="tile-content">
+              <h3>Автоматизированная система позиционирования к установке</h3>
+              <p>для обработки изделий сложной формы импульсными плазменными потоками</p>
+              <a href="{{ url_for('project_detail', project_id=8) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+          <!-- Проект 9 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product9/product91.jpg') }}" alt="Проект 9">
+            <div class="tile-content">
+              <h3>Технология и АПК для дезактивации выведенного из эксплуатации трубного оборудования АЭС с применением озона</h3>
+              <a href="{{ url_for('project_detail', project_id=9) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+          <!-- Проект 10 -->
+          <div class="project-tile">
+            <img src="{{ url_for('static', path='main/images/product10/product101.jpg') }}" alt="Проект 10">
+            <div class="tile-content">
+              <h3>Технический проект АСУ ТП комплекса по наработке актиния фотоядерным способом</h3>
+              <p>С целью повышения безопасности эксплуатации программно-аппаратного комплекса по наработке актиния фотоядерным способом за счет автоматизации функций контроля и управления.</p>
+              <a href="{{ url_for('project_detail', project_id=10) }}" class="btn-more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© {{ year }}<br> Общество с ограниченной ответственностью «ИНАТЭК»<br><br>Все права защищены.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about/">О компании</a></li>
+          <li><a href="/projects/">Проекты</a></li>
+          <li><a href="/contact/">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-contacts">
+        <h4>Контакты</h4>
+        <p>Телефон: <a href="tel:+74951234567">+7 (937) 275-12-52</a></p>
+        <p>Email: <a href="mailto:inatech@mail.ru">inatech@mail.ru</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="{{ url_for('static', path='main/js/script.js') }}"></script>
+</html>

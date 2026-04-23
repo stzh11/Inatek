@@ -1,0 +1,278 @@
+.about-page {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.about-page-content {
+  display: flex;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Левый текст */
+.about-page-text {
+  flex: 1 1 35%;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.about-page-text p {
+  margin-bottom: 20px;
+}
+
+/* Слайдер */
+.about-page-slider {
+  flex: 1 1 40%;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #003366aa;
+}
+
+.about-page-slider img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-page-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* 100% на каждый слайд */
+}
+
+.about-page-slider .slide {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Блок "Наши ценности" */
+.about-values {
+  margin-top: 60px;
+  margin-left:  60px;
+  font-size: 18px;
+}
+
+.about-values h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #66ccff;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-values li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 26px;
+}
+
+.about-values li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00ccff;
+  font-size: 18px;
+}
+
+
+.directors {
+  padding: 40px 60px;
+  background-color: #001f3f;
+  color: #ffffff;
+  text-align: left;
+}
+
+.directors h3 {
+  font-size: 26px;
+  color: #66ccff;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.director {
+  display: inline-block;
+  height: 160px;
+  width: 400px;
+  vertical-align: middle;
+  border-left: #00ccff  3px solid;
+}
+
+.director h4 {
+  margin-left: 40px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.director h5 {
+  margin-left: 40px;
+  font-size: 16px;
+  color: #f6f6f6;
+  margin-bottom: 10px;
+}
+
+.director p {
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #dceeff;
+}
+
+
+
+
+
+.docs-section {
+  padding: 40px 20px;
+  background-color: #001f3f;
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.doc-card {
+  background-color: transparent;
+  border: 3px solid #66ccff;
+  border-radius: 14px;
+  min-height: 120px;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.doc-card:hover {
+  transform: translateY(-4px);
+  background-color: #002b5c;
+}
+
+.doc-card a {
+  display: flex;
+  min-height: 100%;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.doc-card span {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.doc-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-left: 0;
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .about-page-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-page-text,
+  .about-page-slider {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .about-page-slider {
+    height: 240px;
+  }
+
+  .about-page-slider img {
+    height: 240px;
+  }
+
+  .about-values {
+    margin: 40px 0 0 0;
+    font-size: 16px;
+  }
+
+  .about-values h3 {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .directors {
+    padding: 10px 20px;
+  }
+
+  .director {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .director h4,
+  .director h5,
+  .director p {
+    margin-left: 20px;
+  }
+
+  .docs-section {
+    padding: 40px 10px;
+  }
+
+  .docs-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует карточки */
+    gap: 20px;
+  }
+
+  .doc-card {
+    width: 100%;
+    max-width: 380px; /* Максимальная ширина карточки */
+    min-height: 100px;
+  }
+
+  .doc-card a {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .doc-icon {
+    width: 36px;
+    height: 36px;
+    margin-left: 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .about-page,
+  .docs-section {
+    padding: 30px 16px;
+  }
+}
